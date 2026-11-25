@@ -1,0 +1,220 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "schema": "http://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#"
+  },
+  "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+  "@type": [
+    "skos:ConceptScheme"
+  ],
+  "skos:prefLabel": "AQ measurement method / sensing principle",
+  "skos:definition": "Sensing principle / analytical technique used by a sensing element or reference analyser. Low-cost codes (OPC/EC/NDIR/CAP/RTD) follow the LCS reporting template; reference methods cover regulatory analysers. Maps to the EEA/Eionet AQ analytical-technique / measurement-method vocabularies.",
+  "schema:version": "0.1.0",
+  "skos:hasTopConcept": [
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method/OPC",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Optical particle counting",
+      "skos:definition": "Optical particle counting by laser light scattering; the common low-cost particulate-matter sensing principle.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method"
+      },
+      "skos:notation": "OPC",
+      "skos:altLabel": [
+        "optical particle counter",
+        "laser light scattering"
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/measurementmethod/OPC-CMC"
+        }
+      ],
+      "skos:editorialNote": "closeMatch to EEA measurementmethod/OPC-CMC (optical particle counter + conversion to mass); a bare 'optical particle counter' EEA term was not confirmed, and light-scattering/nephelometry notations exist but are unconfirmed."
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method/EC",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Electrochemical sensing",
+      "skos:definition": "Electrochemical (amperometric) gas sensing, common in low-cost NO2 / O3 / CO sensors.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method"
+      },
+      "skos:notation": "EC",
+      "skos:altLabel": [
+        "electrochemical",
+        "amperometric"
+      ],
+      "skos:editorialNote": "No EEA reference-method term for electrochemical (amperometric) gas sensing; electrochemistry is primarily a low-cost-sensor technique. Local concept retained (gap in EEA vocab)."
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method/NDIR",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Non-dispersive infrared",
+      "skos:definition": "Non-dispersive infrared absorption; common for CO2 and CO.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method"
+      },
+      "skos:notation": "NDIR",
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/measurementmethod/NDIR"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method/CAP",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Capacitive sensing",
+      "skos:definition": "Capacitive sensing, typically for relative humidity.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method"
+      },
+      "skos:notation": "CAP",
+      "skos:altLabel": [
+        "capacitive"
+      ],
+      "skos:editorialNote": "Capacitive relative-humidity sensing; no EEA air-pollutant method term (RH is a covariate, not a regulated pollutant)."
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method/RTD",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Resistance temperature detector",
+      "skos:definition": "Resistance temperature detector; temperature sensing.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method"
+      },
+      "skos:notation": "RTD",
+      "skos:editorialNote": "Resistance temperature detector; no EEA air-pollutant method term (temperature is a covariate)."
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method/beta-attenuation",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Beta-ray attenuation",
+      "skos:definition": "Beta-ray attenuation monitoring; a reference/equivalent method for particulate mass.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method"
+      },
+      "skos:notation": "beta-attenuation",
+      "skos:altLabel": [
+        "BAM",
+        "beta attenuation"
+      ],
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/measurementmethod/BETA"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method/gravimetry",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Gravimetry",
+      "skos:definition": "Gravimetric determination of particulate mass on a filter; PM reference method.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method"
+      },
+      "skos:notation": "gravimetry",
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/measurementmethod/GRAVIMETRIC"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/analyticaltechnique/gravi"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method/UV-photometry",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "UV photometry",
+      "skos:definition": "Ultraviolet photometric absorption; ozone reference method.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method"
+      },
+      "skos:notation": "UV-photometry",
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/measurementmethod/UV-P"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method/UV-fluorescence",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "UV fluorescence",
+      "skos:definition": "Ultraviolet fluorescence; sulphur dioxide reference method.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method"
+      },
+      "skos:notation": "UV-fluorescence",
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/measurementmethod/UV-FL"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method/chemiluminescence",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Chemiluminescence",
+      "skos:definition": "Chemiluminescence; nitrogen oxides (NO/NO2/NOx) reference method.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method"
+      },
+      "skos:notation": "chemiluminescence",
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/measurementmethod/chemi"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/analyticaltechnique/CHEMI"
+        }
+      ]
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method/record",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:about": {
+      "@id": "https://w3id.org/cdif/airquality/vocab/measurement-method"
+    },
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/conceptscheme/2.0"
+      }
+    ]
+  }
+}

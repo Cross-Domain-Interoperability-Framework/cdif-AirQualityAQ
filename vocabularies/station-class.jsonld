@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "schema": "http://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#"
+  },
+  "@id": "https://w3id.org/cdif/airquality/vocab/station-class",
+  "@type": [
+    "skos:ConceptScheme"
+  ],
+  "skos:prefLabel": "AQ station / instrument class",
+  "skos:definition": "Classification of air-quality measurement platforms by grade: reference/regulatory-grade monitors vs low-cost sensors. Used on schema:additionalType of the instrument. Maps OpenAQ isMonitor and OpenAQ instrument 'Government Monitor'.",
+  "schema:version": "0.1.0",
+  "skos:hasTopConcept": [
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/station-class/reference-monitor",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Reference-grade monitor",
+      "skos:definition": "A regulatory / reference-grade air-quality monitoring instrument operated to a recognized reference or equivalent method (e.g. an EU AAQD reference method, or a US EPA Federal Reference/Equivalent Method). Corresponds to OpenAQ isMonitor = true.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/station-class"
+      },
+      "skos:notation": "reference-monitor",
+      "skos:altLabel": [
+        "reference monitor",
+        "regulatory monitor"
+      ],
+      "skos:editorialNote": "No established resolvable SKOS term for reference-grade vs low-cost; local concept minted. See CEN/TS 17660 and WMO/GAW guidance. NB EEA aq/stationclassification (background/industrial/traffic) is a different axis (site type, not instrument grade)."
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/station-class/low-cost-sensor",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Low-cost air-quality sensor",
+      "skos:definition": "A low-cost air-quality sensor device, typically community- or citizen-operated and not of reference grade; requires correction/QC for regulatory-comparable use. Corresponds to OpenAQ isMonitor = false.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/station-class"
+      },
+      "skos:notation": "low-cost-sensor",
+      "skos:altLabel": [
+        "LCS",
+        "low-cost sensor"
+      ],
+      "skos:editorialNote": "No established resolvable SKOS term; local concept minted. See CEN/TS 17660 (performance evaluation of air-quality sensor systems)."
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "https://w3id.org/cdif/airquality/vocab/station-class/record",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:about": {
+      "@id": "https://w3id.org/cdif/airquality/vocab/station-class"
+    },
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/conceptscheme/2.0"
+      }
+    ]
+  }
+}

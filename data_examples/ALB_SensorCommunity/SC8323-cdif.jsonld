@@ -1,0 +1,689 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "aq": "https://w3id.org/cdif/airquality/examples/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "time": "http://www.w3.org/2006/time#",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://w3id.org/cdif/",
+    "skos": "http://www.w3.org/2004/02/skos/core#"
+  },
+  "@id": "aq:filter-SC8323-ALB",
+  "@type": [
+    "schema:Dataset"
+  ],
+  "schema:name": "FILTER-processed PM2.5 — Sensor.community sensor SC8323 (Albania)",
+  "schema:description": "Hourly PM2.5 from Sensor.community low-cost sensor SC8323 (location 1835, Albania), harmonized and QC'd by the FILTER framework (Hassani et al. 2025, NILU). Single-channel; corrected values empty for this sensor.",
+  "schema:identifier": {
+    "@type": [
+      "schema:PropertyValue"
+    ],
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:value": "10.6084/m9.figshare.27195720",
+    "schema:url": "https://doi.org/10.6084/m9.figshare.27195720"
+  },
+  "schema:additionalType": [
+    {
+      "@type": [
+        "schema:DefinedTerm"
+      ],
+      "schema:name": "Low-cost air-quality sensor observations",
+      "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/station-class",
+      "schema:termCode": "low-cost-sensor",
+      "schema:identifier": "https://w3id.org/cdif/airquality/vocab/station-class/low-cost-sensor"
+    }
+  ],
+  "schema:dateModified": "2025-03-24",
+  "schema:url": "https://doi.org/10.6084/m9.figshare.27195720",
+  "schema:sameAs": [
+    {
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:propertyID": "https://w3id.org/cdif/airquality/vocab/filter-sensor-id",
+      "schema:value": "SC8323_1835"
+    }
+  ],
+  "schema:measurementTechnique": [
+    {
+      "@type": [
+        "schema:DefinedTerm"
+      ],
+      "schema:name": "Optical particle counting (laser scattering)",
+      "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+      "schema:termCode": "OPC",
+      "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/OPC"
+    }
+  ],
+  "schema:license": [
+    {
+      "@id": "https://creativecommons.org/licenses/by/4.0/",
+      "@type": [
+        "schema:CreativeWork"
+      ],
+      "schema:name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "schema:url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "schema:keywords": [
+    "air quality",
+    "low-cost sensor",
+    "PM2.5",
+    "Sensor.community",
+    "FILTER",
+    "Albania"
+  ],
+  "schema:creator": {
+    "@list": [
+      {
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:name": "Hassani, Amirhossein",
+        "schema:affiliation": {
+          "@id": "https://nilu.com"
+        }
+      },
+      {
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:name": "Salamalikis, Vasileios",
+        "schema:affiliation": {
+          "@id": "https://nilu.com"
+        }
+      },
+      {
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:name": "Schneider, Philipp",
+        "schema:affiliation": {
+          "@id": "https://nilu.com"
+        }
+      },
+      {
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:name": "Stebel, Kerstin",
+        "schema:affiliation": {
+          "@id": "https://nilu.com"
+        }
+      },
+      {
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:name": "Castell, Núria",
+        "schema:affiliation": {
+          "@id": "https://nilu.com"
+        }
+      }
+    ]
+  },
+  "schema:publisher": {
+    "@type": [
+      "schema:Organization"
+    ],
+    "schema:name": "NILU",
+    "schema:url": "https://nilu.com"
+  },
+  "schema:provider": [
+    {
+      "@type": [
+        "schema:Organization"
+      ],
+      "schema:name": "Sensor.community",
+      "schema:url": "https://sensor.community"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload"
+      ],
+      "schema:name": "FILTER dataset (per-country ZIP, Figshare)",
+      "schema:contentUrl": "https://doi.org/10.6084/m9.figshare.27195720",
+      "schema:encodingFormat": [
+        "text/csv",
+        "application/zip"
+      ]
+    },
+    {
+      "@type": [
+        "schema:DataDownload",
+        "cdi:TabularTextDataSet",
+        "cdi:PhysicalDataSet"
+      ],
+      "schema:name": "SC8323_1835.csv",
+      "schema:description": "FILTER CSV, Sensor.community sensor",
+      "schema:contentUrl": "https://w3id.org/cdif/airquality/examples/ALB_SensorCommunity/SC8323_1835.csv",
+      "schema:encodingFormat": [
+        "text/csv"
+      ],
+      "cdi:characterSet": "UTF-8",
+      "cdi:isDelimited": true,
+      "cdi:delimiter": ",",
+      "cdi:hasHeader": true,
+      "cdi:headerRowCount": 1,
+      "cdi:skipRows": 0,
+      "cdi:nullSequence": "",
+      "cdif:hasPhysicalMapping": [
+        {
+          "cdif:index": 0,
+          "cdif:physicalDataType": "Integer",
+          "cdi:isRequired": true,
+          "cdif:formats_InstanceVariable": {
+            "@id": "aq:filter-SC8323-ALB/var/hour_timestamp"
+          }
+        },
+        {
+          "cdif:index": 1,
+          "cdif:physicalDataType": "String",
+          "cdi:isRequired": true,
+          "cdif:formats_InstanceVariable": {
+            "@id": "aq:filter-SC8323-ALB/var/sensor_id"
+          }
+        },
+        {
+          "cdif:index": 2,
+          "cdif:physicalDataType": "String",
+          "cdi:isRequired": true,
+          "cdif:formats_InstanceVariable": {
+            "@id": "aq:filter-SC8323-ALB/var/location"
+          }
+        },
+        {
+          "cdif:index": 3,
+          "cdif:physicalDataType": "Numeric",
+          "cdi:isRequired": true,
+          "cdif:formats_InstanceVariable": {
+            "@id": "aq:filter-SC8323-ALB/var/raw_pm2_5"
+          }
+        },
+        {
+          "cdif:index": 4,
+          "cdif:physicalDataType": "Integer",
+          "cdi:isRequired": false,
+          "cdif:formats_InstanceVariable": {
+            "@id": "aq:filter-SC8323-ALB/var/spread"
+          }
+        },
+        {
+          "cdif:index": 5,
+          "cdif:physicalDataType": "String",
+          "cdi:isRequired": false,
+          "cdif:formats_InstanceVariable": {
+            "@id": "aq:filter-SC8323-ALB/var/raw_qc"
+          }
+        },
+        {
+          "cdif:index": 6,
+          "cdif:physicalDataType": "Numeric",
+          "cdi:isRequired": false,
+          "cdif:formats_InstanceVariable": {
+            "@id": "aq:filter-SC8323-ALB/var/corrected_pm2_5"
+          }
+        },
+        {
+          "cdif:index": 7,
+          "cdif:physicalDataType": "Numeric",
+          "cdi:isRequired": false,
+          "cdif:formats_InstanceVariable": {
+            "@id": "aq:filter-SC8323-ALB/var/corrected_ci_down"
+          }
+        },
+        {
+          "cdif:index": 8,
+          "cdif:physicalDataType": "Numeric",
+          "cdi:isRequired": false,
+          "cdif:formats_InstanceVariable": {
+            "@id": "aq:filter-SC8323-ALB/var/corrected_ci_up"
+          }
+        },
+        {
+          "cdif:index": 9,
+          "cdif:physicalDataType": "Integer",
+          "cdi:isRequired": false,
+          "cdif:formats_InstanceVariable": {
+            "@id": "aq:filter-SC8323-ALB/var/correction_improvement"
+          }
+        },
+        {
+          "cdif:index": 10,
+          "cdif:physicalDataType": "String",
+          "cdi:isRequired": false,
+          "cdif:formats_InstanceVariable": {
+            "@id": "aq:filter-SC8323-ALB/var/corrected_qc"
+          }
+        }
+      ]
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "aq:filter-SC8323-ALB/var/hour_timestamp",
+      "@type": [
+        "schema:PropertyValue",
+        "cdi:InstanceVariable"
+      ],
+      "schema:name": "hour_timestamp",
+      "cdif:name": [
+        "hour_timestamp"
+      ],
+      "cdif:physicalDataType": "xsd:integer",
+      "cdif:role": "Dimension",
+      "schema:description": "Hour start, Unix epoch seconds (UTC)"
+    },
+    {
+      "@id": "aq:filter-SC8323-ALB/var/sensor_id",
+      "@type": [
+        "schema:PropertyValue",
+        "cdi:InstanceVariable"
+      ],
+      "schema:name": "sensor_id",
+      "cdif:name": [
+        "sensor_id"
+      ],
+      "cdif:physicalDataType": "xsd:string",
+      "cdif:role": "Descriptor",
+      "schema:description": "Sensor/channel identifier (e.g. PurpleAir channel A/B)"
+    },
+    {
+      "@id": "aq:filter-SC8323-ALB/var/location",
+      "@type": [
+        "schema:PropertyValue",
+        "cdi:InstanceVariable"
+      ],
+      "schema:name": "location",
+      "cdif:name": [
+        "location"
+      ],
+      "cdif:physicalDataType": "xsd:string",
+      "cdif:role": "Descriptor",
+      "schema:description": "Sensor location id"
+    },
+    {
+      "@id": "aq:filter-SC8323-ALB/var/raw_pm2_5",
+      "@type": [
+        "schema:PropertyValue",
+        "cdi:InstanceVariable"
+      ],
+      "schema:name": "raw_pm2_5",
+      "cdif:name": [
+        "raw_pm2_5"
+      ],
+      "cdif:physicalDataType": "xsd:decimal",
+      "cdif:role": "Measure",
+      "schema:description": "Raw low-cost PM2.5",
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/PM2.5"
+        }
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    },
+    {
+      "@id": "aq:filter-SC8323-ALB/var/spread",
+      "@type": [
+        "schema:PropertyValue",
+        "cdi:InstanceVariable"
+      ],
+      "schema:name": "spread",
+      "cdif:name": [
+        "spread"
+      ],
+      "cdif:physicalDataType": "xsd:integer",
+      "cdif:role": "Attribute",
+      "schema:description": "Hour representativeness 1/2/3",
+      "cdif:qualifies": {
+        "@id": "aq:filter-SC8323-ALB/var/raw_pm2_5"
+      }
+    },
+    {
+      "@id": "aq:filter-SC8323-ALB/var/raw_qc",
+      "@type": [
+        "schema:PropertyValue",
+        "cdi:InstanceVariable"
+      ],
+      "schema:name": "raw_qc",
+      "cdif:name": [
+        "raw_qc"
+      ],
+      "cdif:physicalDataType": "xsd:string",
+      "cdif:role": "Attribute",
+      "schema:description": "FILTER 5-step QC flag string",
+      "cdif:qualifies": {
+        "@id": "aq:filter-SC8323-ALB/var/raw_pm2_5"
+      }
+    },
+    {
+      "@id": "aq:filter-SC8323-ALB/var/corrected_pm2_5",
+      "@type": [
+        "schema:PropertyValue",
+        "cdi:InstanceVariable"
+      ],
+      "schema:name": "corrected_pm2_5",
+      "cdif:name": [
+        "corrected_pm2_5"
+      ],
+      "cdif:physicalDataType": "xsd:decimal",
+      "cdif:role": "Measure",
+      "schema:description": "Bias-corrected PM2.5",
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/PM2.5"
+        }
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    },
+    {
+      "@id": "aq:filter-SC8323-ALB/var/corrected_ci_down",
+      "@type": [
+        "schema:PropertyValue",
+        "cdi:InstanceVariable"
+      ],
+      "schema:name": "corrected_ci_down",
+      "cdif:name": [
+        "corrected_ci_down"
+      ],
+      "cdif:physicalDataType": "xsd:decimal",
+      "cdif:role": "Attribute",
+      "schema:description": "Lower bound of the 95% confidence interval",
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      },
+      "cdif:qualifies": {
+        "@id": "aq:filter-SC8323-ALB/var/corrected_pm2_5"
+      }
+    },
+    {
+      "@id": "aq:filter-SC8323-ALB/var/corrected_ci_up",
+      "@type": [
+        "schema:PropertyValue",
+        "cdi:InstanceVariable"
+      ],
+      "schema:name": "corrected_ci_up",
+      "cdif:name": [
+        "corrected_ci_up"
+      ],
+      "cdif:physicalDataType": "xsd:decimal",
+      "cdif:role": "Attribute",
+      "schema:description": "Upper bound of the 95% confidence interval",
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      },
+      "cdif:qualifies": {
+        "@id": "aq:filter-SC8323-ALB/var/corrected_pm2_5"
+      }
+    },
+    {
+      "@id": "aq:filter-SC8323-ALB/var/correction_improvement",
+      "@type": [
+        "schema:PropertyValue",
+        "cdi:InstanceVariable"
+      ],
+      "schema:name": "correction_improvement",
+      "cdif:name": [
+        "correction_improvement"
+      ],
+      "cdif:physicalDataType": "xsd:integer",
+      "cdif:role": "Attribute",
+      "schema:description": "nRMSE-reduction flag 0/1",
+      "cdif:qualifies": {
+        "@id": "aq:filter-SC8323-ALB/var/corrected_pm2_5"
+      }
+    },
+    {
+      "@id": "aq:filter-SC8323-ALB/var/corrected_qc",
+      "@type": [
+        "schema:PropertyValue",
+        "cdi:InstanceVariable"
+      ],
+      "schema:name": "corrected_qc",
+      "cdif:name": [
+        "corrected_qc"
+      ],
+      "cdif:physicalDataType": "xsd:string",
+      "cdif:role": "Attribute",
+      "schema:description": "FILTER 5-step QC flag string (corrected)",
+      "cdif:qualifies": {
+        "@id": "aq:filter-SC8323-ALB/var/corrected_pm2_5"
+      }
+    }
+  ],
+  "schema:spatialCoverage": [
+    {
+      "@type": [
+        "schema:Place"
+      ],
+      "schema:name": "Albania",
+      "schema:additionalType": [
+        "country"
+      ],
+      "schema:identifier": "AL"
+    }
+  ],
+  "schema:temporalCoverage": [
+    "2018-08-30/2018-09-16"
+  ],
+  "dqv:hasQualityMeasurement": [
+    {
+      "@type": [
+        "dqv:QualityMeasurement"
+      ],
+      "dqv:isMeasurementOf": {
+        "@type": [
+          "schema:DefinedTerm"
+        ],
+        "schema:name": "Range validity",
+        "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/qc",
+        "schema:termCode": "range",
+        "schema:identifier": "https://w3id.org/cdif/airquality/vocab/qc/range"
+      },
+      "dqv:value": "per-hour flag (pos.1 of raw_qc/corrected_qc): 0 out of range, 1 within range"
+    },
+    {
+      "@type": [
+        "dqv:QualityMeasurement"
+      ],
+      "dqv:isMeasurementOf": {
+        "@type": [
+          "schema:DefinedTerm"
+        ],
+        "schema:name": "Constant value",
+        "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/qc",
+        "schema:termCode": "constant",
+        "schema:identifier": "https://w3id.org/cdif/airquality/vocab/qc/constant"
+      },
+      "dqv:value": "pos.2: 0 insufficient data, 1 stuck, 2 varying"
+    },
+    {
+      "@type": [
+        "dqv:QualityMeasurement"
+      ],
+      "dqv:isMeasurementOf": {
+        "@type": [
+          "schema:DefinedTerm"
+        ],
+        "schema:name": "Outlier",
+        "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/qc",
+        "schema:termCode": "outlier",
+        "schema:identifier": "https://w3id.org/cdif/airquality/vocab/qc/outlier"
+      },
+      "dqv:value": "pos.3: 0 no data, 1 self-outlier, 2 neighbour-confirmed outlier, 3 not outlier"
+    },
+    {
+      "@type": [
+        "dqv:QualityMeasurement"
+      ],
+      "dqv:isMeasurementOf": {
+        "@type": [
+          "schema:DefinedTerm"
+        ],
+        "schema:name": "Spatial correlation",
+        "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/qc",
+        "schema:termCode": "spatial-correlation",
+        "schema:identifier": "https://w3id.org/cdif/airquality/vocab/qc/spatial-correlation"
+      },
+      "dqv:value": "pos.4: 0/1 insufficient, 2 fails r~0.7, 3 correlated with neighbours"
+    },
+    {
+      "@type": [
+        "dqv:QualityMeasurement"
+      ],
+      "dqv:isMeasurementOf": {
+        "@type": [
+          "schema:DefinedTerm"
+        ],
+        "schema:name": "Spatial similarity",
+        "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/qc",
+        "schema:termCode": "spatial-similarity",
+        "schema:identifier": "https://w3id.org/cdif/airquality/vocab/qc/spatial-similarity"
+      },
+      "dqv:value": "pos.5: 0/1 insufficient, 2 fails, 3 similar to reference"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "prov:Activity",
+        "schema:Action"
+      ],
+      "schema:additionalType": [
+        {
+          "@type": [
+            "schema:DefinedTerm"
+          ],
+          "schema:name": "Data reduction / correction (FILTER framework)",
+          "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/activity",
+          "schema:termCode": "data-reduction",
+          "schema:identifier": "https://w3id.org/cdif/airquality/vocab/activity/data-reduction"
+        }
+      ],
+      "schema:name": "FILTER — Framework for Improving Low-cost Technology Effectiveness and Reliability",
+      "schema:instrument": {
+        "@id": "aq:instr-sensor.community-node-sc8323",
+        "@type": [
+          "schema:Product"
+        ],
+        "schema:name": "Sensor.community node SC8323",
+        "schema:additionalType": [
+          {
+            "@type": [
+              "schema:DefinedTerm"
+            ],
+            "schema:name": "Low-cost air-quality sensor",
+            "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/station-class",
+            "schema:termCode": "low-cost-sensor",
+            "schema:identifier": "https://w3id.org/cdif/airquality/vocab/station-class/low-cost-sensor"
+          }
+        ],
+        "schema:manufacturer": {
+          "@type": [
+            "schema:Organization"
+          ],
+          "schema:name": "Sensor.community"
+        },
+        "schema:hasPart": [
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "SDS011 PM module",
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "optical particle counter",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "Optical particle counting",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "OPC",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/OPC"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "schema:model": {
+          "@type": [
+            "schema:ProductModel"
+          ],
+          "schema:name": "SDS011 (class)"
+        }
+      }
+    }
+  ],
+  "prov:wasDerivedFrom": [
+    {
+      "@id": "aq:raw-sensorcommunity",
+      "@type": [
+        "schema:Dataset"
+      ],
+      "schema:name": "Raw Sensor.community low-cost sensor observations",
+      "schema:url": "https://sensor.community"
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "aq:filter-SC8323-ALB-record",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:about": {
+      "@id": "aq:filter-SC8323-ALB"
+    },
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/core/2.0"
+      },
+      {
+        "@id": "https://w3id.org/cdif/discovery/2.0"
+      },
+      {
+        "@id": "https://w3id.org/cdif/data_description/2.0"
+      }
+    ],
+    "schema:dateModified": "2025-03-24",
+    "schema:maintainer": {
+      "@type": [
+        "schema:Organization"
+      ],
+      "schema:name": "CDIF Air-Quality profile (example instance)"
+    },
+    "schema:includedInDataCatalog": {
+      "@id": "https://citiobs.eu/data-products/",
+      "@type": [
+        "schema:DataCatalog"
+      ],
+      "schema:name": "CitiObs Data Products",
+      "schema:url": "https://citiobs.eu/data-products/"
+    }
+  }
+}

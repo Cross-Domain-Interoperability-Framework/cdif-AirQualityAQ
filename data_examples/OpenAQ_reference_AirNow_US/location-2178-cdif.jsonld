@@ -1,0 +1,784 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "aq": "https://w3id.org/cdif/airquality/examples/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "time": "http://www.w3.org/2006/time#",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://w3id.org/cdif/",
+    "skos": "http://www.w3.org/2004/02/skos/core#"
+  },
+  "@id": "aq:openaq-loc-2178",
+  "@type": [
+    "schema:Dataset"
+  ],
+  "schema:name": "Reference air-quality monitoring — Del Norte, Albuquerque NM (US EPA AirNow, OpenAQ 2178)",
+  "schema:description": "Hourly reference-grade observations (CO, NO, NO2, NOx, O3, SO2 in ppm; PM10, PM2.5 in µg/m³) from the US EPA AirNow monitoring station 'Del Norte' in Albuquerque, New Mexico, harvested via OpenAQ. Government reference monitor (isMonitor = true).",
+  "schema:identifier": {
+    "@type": [
+      "schema:PropertyValue"
+    ],
+    "schema:propertyID": "https://openaq.org",
+    "schema:value": "2178",
+    "schema:url": "https://api.openaq.org/v3/locations/2178"
+  },
+  "schema:additionalType": [
+    {
+      "@type": [
+        "schema:DefinedTerm"
+      ],
+      "schema:name": "Reference-grade monitor observations",
+      "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/station-class",
+      "schema:termCode": "reference-monitor",
+      "schema:identifier": "https://w3id.org/cdif/airquality/vocab/station-class/reference-monitor"
+    }
+  ],
+  "schema:dateModified": "2026-11-25",
+  "schema:url": "https://explore.openaq.org/locations/2178",
+  "schema:license": [
+    {
+      "@id": "https://www.usa.gov/government-works",
+      "@type": [
+        "schema:CreativeWork"
+      ],
+      "schema:name": "US Public Domain (U.S. Government Work)",
+      "schema:url": "https://www.usa.gov/government-works"
+    }
+  ],
+  "schema:keywords": [
+    "air quality",
+    "reference monitor",
+    "US EPA",
+    "AirNow",
+    "criteria pollutants",
+    "Albuquerque"
+  ],
+  "schema:publisher": {
+    "@type": [
+      "schema:GovernmentOrganization"
+    ],
+    "schema:name": "Unknown Governmental Organization (data owner, per OpenAQ)"
+  },
+  "schema:provider": [
+    {
+      "@type": [
+        "schema:Organization"
+      ],
+      "schema:name": "AirNow",
+      "schema:alternateName": "US EPA AirNow (OpenAQ provider)"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload",
+        "cdi:TabularTextDataSet",
+        "cdi:PhysicalDataSet"
+      ],
+      "schema:name": "OpenAQ daily CSV (location 2178, 2016-09-23)",
+      "schema:contentUrl": "https://openaq-data-archive.s3.amazonaws.com/records/csv.gz/locationid=2178/year=2016/month=09/location-2178-20160923.csv.gz",
+      "schema:encodingFormat": [
+        "text/csv",
+        "application/gzip"
+      ],
+      "cdi:isStructuredBy": {
+        "@type": [
+          "cdi:LongDataStructure"
+        ],
+        "@id": "aq:openaq-loc-2178/struct",
+        "cdi:has_DataStructureComponent": [
+          {
+            "@type": [
+              "cdi:IdentifierComponent"
+            ],
+            "@id": "aq:openaq-loc-2178/struct/comp/location_id",
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-2178/struct/rv/location_id",
+              "cdif:name": [
+                "location_id"
+              ],
+              "cdif:hasIntendedDataType": "xsd:string"
+            }
+          },
+          {
+            "@type": [
+              "cdi:VariableDescriptorComponent"
+            ],
+            "@id": "aq:openaq-loc-2178/struct/comp/parameter",
+            "cdi:refersTo": {
+              "@id": "aq:openaq-loc-2178/struct/comp/value"
+            },
+            "cdif:isDefinedBy_DescriptorVariable": {
+              "@type": [
+                "cdi:DescriptorVariable"
+              ],
+              "@id": "aq:openaq-loc-2178/struct/dv/parameter",
+              "cdif:name": [
+                "parameter"
+              ],
+              "cdif:hasValuesFrom": {
+                "@type": [
+                  "cdi:DescriptorValueDomain"
+                ],
+                "@id": "aq:openaq-loc-2178/struct/vd/parameter",
+                "cdif:takesValuesFrom": [
+                  {
+                    "cdif:value": "co",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-2178-co"
+                    }
+                  },
+                  {
+                    "cdif:value": "no",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-2178-no"
+                    }
+                  },
+                  {
+                    "cdif:value": "no2",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-2178-no2"
+                    }
+                  },
+                  {
+                    "cdif:value": "nox",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-2178-nox"
+                    }
+                  },
+                  {
+                    "cdif:value": "o3",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-2178-o3"
+                    }
+                  },
+                  {
+                    "cdif:value": "so2",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-2178-so2"
+                    }
+                  },
+                  {
+                    "cdif:value": "pm25",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-2178-pm25"
+                    }
+                  },
+                  {
+                    "cdif:value": "pm10",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-2178-pm10"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "@type": [
+              "cdi:VariableValueComponent"
+            ],
+            "@id": "aq:openaq-loc-2178/struct/comp/value",
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-2178/struct/rv/value",
+              "cdif:name": [
+                "value"
+              ],
+              "cdif:hasIntendedDataType": "xsd:decimal"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-2178/struct/comp/sensors_id",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-2178/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-2178/struct/rv/sensors_id",
+              "cdif:name": [
+                "sensors_id"
+              ],
+              "cdif:hasIntendedDataType": "xsd:string"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-2178/struct/comp/datetime",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-2178/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-2178/struct/rv/datetime",
+              "cdif:name": [
+                "datetime"
+              ],
+              "cdif:hasIntendedDataType": "xsd:dateTime"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-2178/struct/comp/units",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-2178/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-2178/struct/rv/units",
+              "cdif:name": [
+                "units"
+              ],
+              "cdif:hasIntendedDataType": "xsd:string"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-2178/struct/comp/lat",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-2178/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-2178/struct/rv/lat",
+              "cdif:name": [
+                "lat"
+              ],
+              "cdif:hasIntendedDataType": "xsd:decimal"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-2178/struct/comp/lon",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-2178/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-2178/struct/rv/lon",
+              "cdif:name": [
+                "lon"
+              ],
+              "cdif:hasIntendedDataType": "xsd:decimal"
+            }
+          }
+        ],
+        "cdif:has_PrimaryKey": {
+          "@type": [
+            "cdif:Key"
+          ],
+          "@id": "aq:openaq-loc-2178/struct/pk",
+          "cdif:isComposedOf": [
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-2178/struct/comp/location_id"
+              },
+              "cdi:value": 1
+            },
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-2178/struct/comp/parameter"
+              },
+              "cdi:value": 2
+            },
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-2178/struct/comp/sensors_id"
+              },
+              "cdi:value": 3
+            },
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-2178/struct/comp/datetime"
+              },
+              "cdi:value": 4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": [
+        "schema:WebAPI"
+      ],
+      "schema:name": "OpenAQ v3 API",
+      "schema:serviceType": "OpenAQ v3",
+      "schema:termsOfService": "https://docs.openaq.org/about/terms",
+      "schema:documentation": "https://docs.openaq.org/",
+      "schema:potentialAction": [
+        {
+          "@type": [
+            "schema:SearchAction"
+          ],
+          "schema:name": "Get location",
+          "schema:target": {
+            "@type": [
+              "schema:EntryPoint"
+            ],
+            "schema:urlTemplate": "https://api.openaq.org/v3/locations/2178",
+            "schema:httpMethod": [
+              "GET"
+            ],
+            "schema:contentType": [
+              "application/json"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "aq:v-2178-co",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "co",
+      "schema:alternateName": [
+        "CO"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/CO"
+        }
+      ],
+      "schema:unitText": "ppm",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/PPM"
+      }
+    },
+    {
+      "@id": "aq:v-2178-no",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "no",
+      "schema:alternateName": [
+        "NO"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/NO"
+        }
+      ],
+      "schema:unitText": "ppm",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/PPM"
+      }
+    },
+    {
+      "@id": "aq:v-2178-no2",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "no2",
+      "schema:alternateName": [
+        "NO2"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/NO2"
+        }
+      ],
+      "schema:unitText": "ppm",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/PPM"
+      }
+    },
+    {
+      "@id": "aq:v-2178-nox",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "nox",
+      "schema:alternateName": [
+        "NOX"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/NOx"
+        }
+      ],
+      "schema:unitText": "ppm",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/PPM"
+      }
+    },
+    {
+      "@id": "aq:v-2178-o3",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "o3",
+      "schema:alternateName": [
+        "O3"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/O3"
+        }
+      ],
+      "schema:unitText": "ppm",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/PPM"
+      }
+    },
+    {
+      "@id": "aq:v-2178-so2",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "so2",
+      "schema:alternateName": [
+        "SO2"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/SO2"
+        }
+      ],
+      "schema:unitText": "ppm",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/PPM"
+      }
+    },
+    {
+      "@id": "aq:v-2178-pm25",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "pm25",
+      "schema:alternateName": [
+        "PM2.5"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/PM2.5"
+        }
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    },
+    {
+      "@id": "aq:v-2178-pm10",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "pm10",
+      "schema:alternateName": [
+        "PM10"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/PM10"
+        }
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    }
+  ],
+  "schema:spatialCoverage": [
+    {
+      "@type": [
+        "schema:Place"
+      ],
+      "schema:name": "Del Norte, Albuquerque",
+      "schema:geo": {
+        "@type": [
+          "schema:GeoCoordinates"
+        ],
+        "schema:latitude": 35.1353,
+        "schema:longitude": -106.584702
+      }
+    }
+  ],
+  "schema:temporalCoverage": [
+    "2016-03-06/2026-11-24"
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "prov:Activity",
+        "schema:Action"
+      ],
+      "schema:additionalType": [
+        {
+          "@type": [
+            "schema:DefinedTerm"
+          ],
+          "schema:name": "Stationary deployment",
+          "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/mobility",
+          "schema:termCode": "static",
+          "schema:identifier": "https://w3id.org/cdif/airquality/vocab/mobility/static"
+        }
+      ],
+      "schema:instrument": {
+        "@id": "aq:instr-gov-monitor",
+        "@type": [
+          "schema:Product"
+        ],
+        "schema:name": "Government reference monitor",
+        "schema:additionalType": [
+          {
+            "@type": [
+              "schema:DefinedTerm"
+            ],
+            "schema:name": "Reference-grade monitor",
+            "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/station-class",
+            "schema:termCode": "reference-monitor",
+            "schema:identifier": "https://w3id.org/cdif/airquality/vocab/station-class/reference-monitor"
+          }
+        ],
+        "schema:hasPart": [
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "Particulate analyser",
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "beta-ray attenuation detector",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "Beta-ray attenuation",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "beta-attenuation",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/beta-attenuation"
+                  }
+                ]
+              }
+            ],
+            "schema:model": {
+              "@type": [
+                "schema:ProductModel"
+              ],
+              "schema:name": "BAM"
+            }
+          },
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "Nitrogen oxides analyser",
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "chemiluminescence detector",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "Chemiluminescence",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "chemiluminescence",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/chemiluminescence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "Ozone analyser",
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "UV photometric detector",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "UV photometry",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "UV-photometry",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/UV-photometry"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "Sulphur dioxide analyser",
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "UV fluorescence detector",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "UV fluorescence",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "UV-fluorescence",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/UV-fluorescence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "Carbon monoxide analyser",
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "NDIR detector",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "Non-dispersive infrared",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "NDIR",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/NDIR"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "schema:location": {
+        "@type": [
+          "schema:Place"
+        ],
+        "schema:name": "Del Norte, Albuquerque",
+        "schema:additionalProperty": [
+          {
+            "@type": [
+              "schema:PropertyValue"
+            ],
+            "schema:name": "time zone",
+            "schema:propertyID": [
+              "https://www.iana.org/time-zones"
+            ],
+            "schema:value": "America/Denver"
+          }
+        ]
+      }
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "aq:openaq-loc-2178-record",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:about": {
+      "@id": "aq:openaq-loc-2178"
+    },
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/core/2.0"
+      },
+      {
+        "@id": "https://w3id.org/cdif/discovery/2.0"
+      },
+      {
+        "@id": "https://w3id.org/cdif/data_structure/2.0"
+      }
+    ],
+    "schema:dateModified": "2026-11-25",
+    "schema:maintainer": {
+      "@type": [
+        "schema:Organization"
+      ],
+      "schema:name": "CDIF Air-Quality profile (example instance)"
+    },
+    "schema:includedInDataCatalog": {
+      "@id": "https://openaq.org",
+      "@type": [
+        "schema:DataCatalog"
+      ],
+      "schema:name": "OpenAQ",
+      "schema:url": "https://openaq.org"
+    }
+  }
+}

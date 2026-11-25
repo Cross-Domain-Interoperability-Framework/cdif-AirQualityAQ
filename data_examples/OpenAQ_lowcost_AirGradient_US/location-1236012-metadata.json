@@ -1,0 +1,144 @@
+{
+  "id": 1236012,
+  "name": "Moraga, Merced",
+  "locality": null,
+  "timezone": "America/Los_Angeles",
+  "country": {
+    "id": 155,
+    "code": "US",
+    "name": "United States"
+  },
+  "owner": {
+    "id": 10998,
+    "name": "SEEN/SEEDS"
+  },
+  "provider": {
+    "id": 66,
+    "name": "AirGradient"
+  },
+  "isMobile": false,
+  "isMonitor": false,
+  "instruments": [
+    {
+      "id": 7,
+      "name": "Unknown AirGradient Sensor"
+    },
+    {
+      "id": 7,
+      "name": "Unknown AirGradient Sensor"
+    }
+  ],
+  "sensors": [
+    {
+      "id": 7978478,
+      "name": "pm1 µg/m³",
+      "parameter": {
+        "id": 19,
+        "name": "pm1",
+        "units": "µg/m³",
+        "displayName": "PM1"
+      }
+    },
+    {
+      "id": 7971317,
+      "name": "pm1 µg/m³",
+      "parameter": {
+        "id": 19,
+        "name": "pm1",
+        "units": "µg/m³",
+        "displayName": "PM1"
+      }
+    },
+    {
+      "id": 7978465,
+      "name": "pm10 µg/m³",
+      "parameter": {
+        "id": 1,
+        "name": "pm10",
+        "units": "µg/m³",
+        "displayName": "PM10"
+      }
+    },
+    {
+      "id": 7970883,
+      "name": "pm10 µg/m³",
+      "parameter": {
+        "id": 1,
+        "name": "pm10",
+        "units": "µg/m³",
+        "displayName": "PM10"
+      }
+    },
+    {
+      "id": 6530210,
+      "name": "pm25 µg/m³",
+      "parameter": {
+        "id": 2,
+        "name": "pm25",
+        "units": "µg/m³",
+        "displayName": "PM2.5"
+      }
+    },
+    {
+      "id": 7972943,
+      "name": "relativehumidity %",
+      "parameter": {
+        "id": 98,
+        "name": "relativehumidity",
+        "units": "%",
+        "displayName": "RH"
+      }
+    },
+    {
+      "id": 6530212,
+      "name": "temperature c",
+      "parameter": {
+        "id": 100,
+        "name": "temperature",
+        "units": "c",
+        "displayName": "Temperature (C)"
+      }
+    },
+    {
+      "id": 7972925,
+      "name": "um003 particles/cm³",
+      "parameter": {
+        "id": 125,
+        "name": "um003",
+        "units": "particles/cm³",
+        "displayName": "PM0.3 count"
+      }
+    }
+  ],
+  "coordinates": {
+    "latitude": 37.329078,
+    "longitude": -120.436499
+  },
+  "licenses": [
+    {
+      "id": 41,
+      "name": "CC BY 4.0",
+      "attribution": {
+        "name": "SEEN/SEEDS",
+        "url": null
+      },
+      "dateFrom": "2023-07-15",
+      "dateTo": null
+    }
+  ],
+  "bounds": [
+    -120.436499,
+    37.329078,
+    -120.436499,
+    37.329078
+  ],
+  "distance": null,
+  "datetimeFirst": {
+    "utc": "2023-07-15T13:00:00Z",
+    "local": "2023-07-15T06:00:00-07:00"
+  },
+  "datetimeLast": {
+    "utc": "2026-11-24T21:00:00Z",
+    "local": "2026-11-24T13:00:00-08:00"
+  }
+}

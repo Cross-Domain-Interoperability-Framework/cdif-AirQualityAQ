@@ -1,0 +1,677 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "aq": "https://w3id.org/cdif/airquality/examples/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "time": "http://www.w3.org/2006/time#",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://w3id.org/cdif/",
+    "skos": "http://www.w3.org/2004/02/skos/core#"
+  },
+  "@id": "aq:openaq-loc-844",
+  "@type": [
+    "schema:Dataset"
+  ],
+  "schema:name": "Reference air-quality monitoring — Cerrillos (Chile SINCA, OpenAQ 844)",
+  "schema:description": "Hourly reference-grade observations (CO, NO2, O3, PM10, PM2.5 — all in µg/m³) from the Chilean SINCA monitoring station 'Cerrillos', harvested via OpenAQ. Government reference monitor; note gases reported in µg/m³ (contrast with AirNow's ppm).",
+  "schema:identifier": {
+    "@type": [
+      "schema:PropertyValue"
+    ],
+    "schema:propertyID": "https://openaq.org",
+    "schema:value": "844",
+    "schema:url": "https://api.openaq.org/v3/locations/844"
+  },
+  "schema:additionalType": [
+    {
+      "@type": [
+        "schema:DefinedTerm"
+      ],
+      "schema:name": "Reference-grade monitor observations",
+      "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/station-class",
+      "schema:termCode": "reference-monitor",
+      "schema:identifier": "https://w3id.org/cdif/airquality/vocab/station-class/reference-monitor"
+    }
+  ],
+  "schema:dateModified": "2026-11-25",
+  "schema:url": "https://explore.openaq.org/locations/844",
+  "schema:conditionsOfAccess": [
+    "License not specified by the provider in OpenAQ; consult Chile SINCA (sinca.mma.gob.cl) terms of use before reuse."
+  ],
+  "schema:keywords": [
+    "air quality",
+    "reference monitor",
+    "Chile",
+    "SINCA",
+    "criteria pollutants",
+    "Cerrillos"
+  ],
+  "schema:publisher": {
+    "@type": [
+      "schema:GovernmentOrganization"
+    ],
+    "schema:name": "Unknown Governmental Organization (data owner, per OpenAQ)"
+  },
+  "schema:provider": [
+    {
+      "@type": [
+        "schema:Organization"
+      ],
+      "schema:name": "Chile - SINCA",
+      "schema:url": "https://sinca.mma.gob.cl"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload",
+        "cdi:TabularTextDataSet",
+        "cdi:PhysicalDataSet"
+      ],
+      "schema:name": "OpenAQ daily CSV (location 844, 2016-06-14)",
+      "schema:contentUrl": "https://openaq-data-archive.s3.amazonaws.com/records/csv.gz/locationid=844/year=2016/month=06/location-844-20160614.csv.gz",
+      "schema:encodingFormat": [
+        "text/csv",
+        "application/gzip"
+      ],
+      "cdi:isStructuredBy": {
+        "@type": [
+          "cdi:LongDataStructure"
+        ],
+        "@id": "aq:openaq-loc-844/struct",
+        "cdi:has_DataStructureComponent": [
+          {
+            "@type": [
+              "cdi:IdentifierComponent"
+            ],
+            "@id": "aq:openaq-loc-844/struct/comp/location_id",
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-844/struct/rv/location_id",
+              "cdif:name": [
+                "location_id"
+              ],
+              "cdif:hasIntendedDataType": "xsd:string"
+            }
+          },
+          {
+            "@type": [
+              "cdi:VariableDescriptorComponent"
+            ],
+            "@id": "aq:openaq-loc-844/struct/comp/parameter",
+            "cdi:refersTo": {
+              "@id": "aq:openaq-loc-844/struct/comp/value"
+            },
+            "cdif:isDefinedBy_DescriptorVariable": {
+              "@type": [
+                "cdi:DescriptorVariable"
+              ],
+              "@id": "aq:openaq-loc-844/struct/dv/parameter",
+              "cdif:name": [
+                "parameter"
+              ],
+              "cdif:hasValuesFrom": {
+                "@type": [
+                  "cdi:DescriptorValueDomain"
+                ],
+                "@id": "aq:openaq-loc-844/struct/vd/parameter",
+                "cdif:takesValuesFrom": [
+                  {
+                    "cdif:value": "co",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-844-co"
+                    }
+                  },
+                  {
+                    "cdif:value": "no2",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-844-no2"
+                    }
+                  },
+                  {
+                    "cdif:value": "o3",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-844-o3"
+                    }
+                  },
+                  {
+                    "cdif:value": "pm25",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-844-pm25"
+                    }
+                  },
+                  {
+                    "cdif:value": "pm10",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:v-844-pm10"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "@type": [
+              "cdi:VariableValueComponent"
+            ],
+            "@id": "aq:openaq-loc-844/struct/comp/value",
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-844/struct/rv/value",
+              "cdif:name": [
+                "value"
+              ],
+              "cdif:hasIntendedDataType": "xsd:decimal"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-844/struct/comp/sensors_id",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-844/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-844/struct/rv/sensors_id",
+              "cdif:name": [
+                "sensors_id"
+              ],
+              "cdif:hasIntendedDataType": "xsd:string"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-844/struct/comp/datetime",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-844/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-844/struct/rv/datetime",
+              "cdif:name": [
+                "datetime"
+              ],
+              "cdif:hasIntendedDataType": "xsd:dateTime"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-844/struct/comp/units",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-844/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-844/struct/rv/units",
+              "cdif:name": [
+                "units"
+              ],
+              "cdif:hasIntendedDataType": "xsd:string"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-844/struct/comp/lat",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-844/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-844/struct/rv/lat",
+              "cdif:name": [
+                "lat"
+              ],
+              "cdif:hasIntendedDataType": "xsd:decimal"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-844/struct/comp/lon",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-844/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-844/struct/rv/lon",
+              "cdif:name": [
+                "lon"
+              ],
+              "cdif:hasIntendedDataType": "xsd:decimal"
+            }
+          }
+        ],
+        "cdif:has_PrimaryKey": {
+          "@type": [
+            "cdif:Key"
+          ],
+          "@id": "aq:openaq-loc-844/struct/pk",
+          "cdif:isComposedOf": [
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-844/struct/comp/location_id"
+              },
+              "cdi:value": 1
+            },
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-844/struct/comp/parameter"
+              },
+              "cdi:value": 2
+            },
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-844/struct/comp/sensors_id"
+              },
+              "cdi:value": 3
+            },
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-844/struct/comp/datetime"
+              },
+              "cdi:value": 4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": [
+        "schema:WebAPI"
+      ],
+      "schema:name": "OpenAQ v3 API",
+      "schema:serviceType": "OpenAQ v3",
+      "schema:termsOfService": "https://docs.openaq.org/about/terms",
+      "schema:documentation": "https://docs.openaq.org/",
+      "schema:potentialAction": [
+        {
+          "@type": [
+            "schema:SearchAction"
+          ],
+          "schema:name": "Get location",
+          "schema:target": {
+            "@type": [
+              "schema:EntryPoint"
+            ],
+            "schema:urlTemplate": "https://api.openaq.org/v3/locations/844",
+            "schema:httpMethod": [
+              "GET"
+            ],
+            "schema:contentType": [
+              "application/json"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "aq:v-844-co",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "co",
+      "schema:alternateName": [
+        "CO"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/CO"
+        }
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    },
+    {
+      "@id": "aq:v-844-no2",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "no2",
+      "schema:alternateName": [
+        "NO2"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/NO2"
+        }
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    },
+    {
+      "@id": "aq:v-844-o3",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "o3",
+      "schema:alternateName": [
+        "O3"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/O3"
+        }
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    },
+    {
+      "@id": "aq:v-844-pm25",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "pm25",
+      "schema:alternateName": [
+        "PM2.5"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/PM2.5"
+        }
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    },
+    {
+      "@id": "aq:v-844-pm10",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "pm10",
+      "schema:alternateName": [
+        "PM10"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/PM10"
+        }
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    }
+  ],
+  "schema:spatialCoverage": [
+    {
+      "@type": [
+        "schema:Place"
+      ],
+      "schema:name": "Cerrillos",
+      "schema:geo": {
+        "@type": [
+          "schema:GeoCoordinates"
+        ],
+        "schema:latitude": -33.492849,
+        "schema:longitude": -70.71944
+      }
+    }
+  ],
+  "schema:temporalCoverage": [
+    "2016-01-30/2017-04-07"
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "prov:Activity",
+        "schema:Action"
+      ],
+      "schema:additionalType": [
+        {
+          "@type": [
+            "schema:DefinedTerm"
+          ],
+          "schema:name": "Stationary deployment",
+          "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/mobility",
+          "schema:termCode": "static",
+          "schema:identifier": "https://w3id.org/cdif/airquality/vocab/mobility/static"
+        }
+      ],
+      "schema:instrument": {
+        "@id": "aq:instr-gov-monitor",
+        "@type": [
+          "schema:Product"
+        ],
+        "schema:name": "Government reference monitor",
+        "schema:additionalType": [
+          {
+            "@type": [
+              "schema:DefinedTerm"
+            ],
+            "schema:name": "Reference-grade monitor",
+            "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/station-class",
+            "schema:termCode": "reference-monitor",
+            "schema:identifier": "https://w3id.org/cdif/airquality/vocab/station-class/reference-monitor"
+          }
+        ],
+        "schema:hasPart": [
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "Particulate analyser",
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "beta-ray attenuation detector",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "Beta-ray attenuation",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "beta-attenuation",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/beta-attenuation"
+                  }
+                ]
+              }
+            ],
+            "schema:model": {
+              "@type": [
+                "schema:ProductModel"
+              ],
+              "schema:name": "BAM"
+            }
+          },
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "Nitrogen oxides analyser",
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "chemiluminescence detector",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "Chemiluminescence",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "chemiluminescence",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/chemiluminescence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "Ozone analyser",
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "UV photometric detector",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "UV photometry",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "UV-photometry",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/UV-photometry"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "Carbon monoxide analyser",
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "NDIR detector",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "Non-dispersive infrared",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "NDIR",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/NDIR"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "schema:location": {
+        "@type": [
+          "schema:Place"
+        ],
+        "schema:name": "Cerrillos",
+        "schema:additionalProperty": [
+          {
+            "@type": [
+              "schema:PropertyValue"
+            ],
+            "schema:name": "time zone",
+            "schema:propertyID": [
+              "https://www.iana.org/time-zones"
+            ],
+            "schema:value": "America/Santiago"
+          }
+        ]
+      }
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "aq:openaq-loc-844-record",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:about": {
+      "@id": "aq:openaq-loc-844"
+    },
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/core/2.0"
+      },
+      {
+        "@id": "https://w3id.org/cdif/discovery/2.0"
+      },
+      {
+        "@id": "https://w3id.org/cdif/data_structure/2.0"
+      }
+    ],
+    "schema:dateModified": "2026-11-25",
+    "schema:maintainer": {
+      "@type": [
+        "schema:Organization"
+      ],
+      "schema:name": "CDIF Air-Quality profile (example instance)"
+    },
+    "schema:includedInDataCatalog": {
+      "@id": "https://openaq.org",
+      "@type": [
+        "schema:DataCatalog"
+      ],
+      "schema:name": "OpenAQ",
+      "schema:url": "https://openaq.org"
+    }
+  }
+}

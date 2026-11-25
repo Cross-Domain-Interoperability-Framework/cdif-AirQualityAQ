@@ -1,0 +1,146 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "schema": "http://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#"
+  },
+  "@id": "https://w3id.org/cdif/airquality/vocab/qc",
+  "@type": [
+    "skos:ConceptScheme"
+  ],
+  "skos:prefLabel": "AQ quality-control steps and flags",
+  "skos:definition": "Quality-control checks and correction diagnostics applied to low-cost sensor data. The first five correspond to the positions of the FILTER 5-character QC flag string (raw_qc / corrected_qc). Used as dqv:isMeasurementOf.",
+  "schema:version": "0.1.0",
+  "skos:hasTopConcept": [
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/qc/range-validity",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Range validity",
+      "skos:definition": "QC step: whether a value is within the plausible physical range (0–1000 µg/m³ for PM2.5). FILTER flag position 1 (0 out of range, 1 within range).",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/qc"
+      },
+      "skos:notation": "range-validity"
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/qc/constant-value",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Constant-value check",
+      "skos:definition": "QC step: detects a sensor reporting near-constant (stuck) values over a moving window. FILTER flag position 2 (0 insufficient data, 1 stuck, 2 varying).",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/qc"
+      },
+      "skos:notation": "constant-value"
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/qc/outlier",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Outlier detection",
+      "skos:definition": "QC step: detects outliers using median absolute deviation and neighbour cross-checks. FILTER flag position 3 (0 no data, 1 self-outlier, 2 neighbour-confirmed, 3 not outlier).",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/qc"
+      },
+      "skos:notation": "outlier"
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/qc/spatial-correlation",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Spatial correlation",
+      "skos:definition": "QC step: tests Pearson correlation of the sensor with neighbours over a rolling window. FILTER flag position 4 (3 = correlated with neighbours).",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/qc"
+      },
+      "skos:notation": "spatial-correlation"
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/qc/spatial-similarity",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Spatial similarity",
+      "skos:definition": "QC step: tests similarity of the sensor to nearby reference stations. FILTER flag position 5 (3 = similar to reference).",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/qc"
+      },
+      "skos:notation": "spatial-similarity"
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/qc/correction-improvement",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Correction improvement",
+      "skos:definition": "Diagnostic: whether the distant-correction model reduced the normalized RMSE versus reference for an observation (0/1).",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/qc"
+      },
+      "skos:notation": "correction-improvement"
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/qc/correction-method",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Correction method applied",
+      "skos:definition": "The correction / bias-adjustment algorithm applied to raw sensor values (e.g. EPA correction, distant LCS correction).",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/qc"
+      },
+      "skos:notation": "correction-method"
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/qc/validity",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Validity",
+      "skos:definition": "Whether a measurement value is valid (valid / not valid / below detection). Aligns with EEA e-Reporting validity flags.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/qc"
+      },
+      "skos:notation": "validity",
+      "skos:editorialNote": "Candidate mapping to the EEA e-Reporting observation-validity flag vocabulary under dd.eionet.europa.eu/vocabulary/aq/ (verify exact scheme/term URIs)."
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/qc/verification",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Verification",
+      "skos:definition": "Whether quality control / verification has been performed on a value. Aligns with EEA e-Reporting verification flags.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/qc"
+      },
+      "skos:notation": "verification",
+      "skos:editorialNote": "Candidate mapping to the EEA e-Reporting verification flag vocabulary (verify exact scheme/term URIs)."
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "https://w3id.org/cdif/airquality/vocab/qc/record",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:about": {
+      "@id": "https://w3id.org/cdif/airquality/vocab/qc"
+    },
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/conceptscheme/2.0"
+      }
+    ]
+  }
+}

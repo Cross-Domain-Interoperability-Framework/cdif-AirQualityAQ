@@ -1,0 +1,66 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "schema": "http://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#"
+  },
+  "@id": "https://w3id.org/cdif/airquality/vocab/mobility",
+  "@type": [
+    "skos:ConceptScheme"
+  ],
+  "skos:prefLabel": "Measurement platform mobility",
+  "skos:definition": "Whether a measurement platform is stationary or mobile. Used on schema:additionalType of the deployment activity (prov:wasGeneratedBy.schema:Action). Maps OpenAQ isMobile and the LCS 'Monitoring mode'.",
+  "schema:version": "0.1.0",
+  "skos:hasTopConcept": [
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/mobility/static",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Stationary",
+      "skos:definition": "A fixed-location measurement platform whose position does not change during the monitoring period. Corresponds to OpenAQ isMobile = false.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/mobility"
+      },
+      "skos:notation": "static",
+      "skos:altLabel": [
+        "fixed",
+        "stationary"
+      ],
+      "skos:editorialNote": "No established SKOS term; EEA AQD encodes mobility as a boolean field and SOSA has sosa:Platform but no fixed/mobile concept. Local concept minted."
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/mobility/mobile",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Mobile",
+      "skos:definition": "A measurement platform whose geographic location varies over time; per-observation coordinates are provided. Corresponds to OpenAQ isMobile = true.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/mobility"
+      },
+      "skos:notation": "mobile",
+      "skos:editorialNote": "No established SKOS term; local concept minted (see mobility/static)."
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "https://w3id.org/cdif/airquality/vocab/mobility/record",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:about": {
+      "@id": "https://w3id.org/cdif/airquality/vocab/mobility"
+    },
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/conceptscheme/2.0"
+      }
+    ]
+  }
+}

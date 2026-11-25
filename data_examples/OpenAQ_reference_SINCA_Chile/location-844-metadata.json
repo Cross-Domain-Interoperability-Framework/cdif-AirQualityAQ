@@ -1,0 +1,99 @@
+{
+  "id": 844,
+  "name": "Cerrillos",
+  "locality": null,
+  "timezone": "America/Santiago",
+  "country": {
+    "id": 3,
+    "code": "CL",
+    "name": "Chile"
+  },
+  "owner": {
+    "id": 4,
+    "name": "Unknown Governmental Organization"
+  },
+  "provider": {
+    "id": 164,
+    "name": "Chile - SINCA"
+  },
+  "isMobile": false,
+  "isMonitor": true,
+  "instruments": [
+    {
+      "id": 2,
+      "name": "Government Monitor"
+    }
+  ],
+  "sensors": [
+    {
+      "id": 1498,
+      "name": "co µg/m³",
+      "parameter": {
+        "id": 4,
+        "name": "co",
+        "units": "µg/m³",
+        "displayName": "CO mass"
+      }
+    },
+    {
+      "id": 1521,
+      "name": "no2 µg/m³",
+      "parameter": {
+        "id": 5,
+        "name": "no2",
+        "units": "µg/m³",
+        "displayName": "NO₂ mass"
+      }
+    },
+    {
+      "id": 1520,
+      "name": "o3 µg/m³",
+      "parameter": {
+        "id": 3,
+        "name": "o3",
+        "units": "µg/m³",
+        "displayName": "O₃ mass"
+      }
+    },
+    {
+      "id": 4409,
+      "name": "pm10 µg/m³",
+      "parameter": {
+        "id": 1,
+        "name": "pm10",
+        "units": "µg/m³",
+        "displayName": "PM10"
+      }
+    },
+    {
+      "id": 3186,
+      "name": "pm25 µg/m³",
+      "parameter": {
+        "id": 2,
+        "name": "pm25",
+        "units": "µg/m³",
+        "displayName": "PM2.5"
+      }
+    }
+  ],
+  "coordinates": {
+    "latitude": -33.492848789461,
+    "longitude": -70.719440279762
+  },
+  "licenses": null,
+  "bounds": [
+    -70.719440279762,
+    -33.492848789461,
+    -70.719440279762,
+    -33.492848789461
+  ],
+  "distance": null,
+  "datetimeFirst": {
+    "utc": "2016-01-30T01:00:00Z",
+    "local": "2016-01-29T22:00:00-03:00"
+  },
+  "datetimeLast": {
+    "utc": "2017-04-07T18:00:00Z",
+    "local": "2017-04-07T15:00:00-03:00"
+  }
+}

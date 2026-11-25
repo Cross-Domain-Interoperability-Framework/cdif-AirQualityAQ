@@ -1,0 +1,11 @@
+# Claude Code local session settings
+.claude/
+
+# Excel lock files
+~$*.xlsx
+~$*.xls
+
+# Python
+__pycache__/
+*.pyc
+.venv/

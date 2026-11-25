@@ -1,0 +1,219 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "schema": "http://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#"
+  },
+  "@id": "https://w3id.org/cdif/airquality/vocab/pollutant",
+  "@type": [
+    "skos:ConceptScheme"
+  ],
+  "skos:prefLabel": "AQ pollutants / measured variables",
+  "skos:definition": "Air-quality pollutants and co-measured variables used as schema:propertyID / schema:variableMeasured. Each concept carries skos:exactMatch to the EEA/Eionet AQD pollutant term (AQD canonical identifier) and skos:closeMatch to the corresponding CF standard name (observable quantity). Use these in place of bare term-code strings.",
+  "schema:version": "0.1.0",
+  "skos:hasTopConcept": [
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/PM2.5",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Particulate matter < 2.5 µm",
+      "skos:definition": "Mass concentration of particulate matter with aerodynamic diameter < 2.5 µm in ambient air.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/pollutant"
+      },
+      "skos:notation": "PM2.5",
+      "skos:altLabel": [
+        "PM2.5"
+      ],
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/6001"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_pm2p5_ambient_aerosol_particles_in_air/"
+        }
+      ],
+      "skos:editorialNote": "exactMatch is to the EEA AQD pollutant term (the AQ-domain canonical identifier for the measured pollutant); the CF standard name is closeMatch because it denotes the observable quantity and units (mass concentration in air) rather than the substance. Same pattern applies to the other pollutant concepts."
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/PM10",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Particulate matter < 10 µm",
+      "skos:definition": "Mass concentration of particulate matter with aerodynamic diameter < 10 µm in ambient air.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/pollutant"
+      },
+      "skos:notation": "PM10",
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/5"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://vocab.nerc.ac.uk/standard_name/mass_concentration_of_pm10_ambient_aerosol_particles_in_air/"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/O3",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Ozone",
+      "skos:definition": "Ozone in ambient air.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/pollutant"
+      },
+      "skos:notation": "O3",
+      "skos:altLabel": [
+        "ozone"
+      ],
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/7"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://vocab.nerc.ac.uk/standard_name/mole_fraction_of_ozone_in_air/"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/NO2",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Nitrogen dioxide",
+      "skos:definition": "Nitrogen dioxide in ambient air.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/pollutant"
+      },
+      "skos:notation": "NO2",
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/8"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://vocab.nerc.ac.uk/standard_name/mole_fraction_of_nitrogen_dioxide_in_air/"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/SO2",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Sulphur dioxide",
+      "skos:definition": "Sulphur dioxide in ambient air.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/pollutant"
+      },
+      "skos:notation": "SO2",
+      "skos:altLabel": [
+        "sulfur dioxide"
+      ],
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/1"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://vocab.nerc.ac.uk/standard_name/mole_fraction_of_sulfur_dioxide_in_air/"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/CO",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Carbon monoxide",
+      "skos:definition": "Carbon monoxide in ambient air.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/pollutant"
+      },
+      "skos:notation": "CO",
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/10"
+        }
+      ],
+      "skos:closeMatch": [
+        {
+          "@id": "http://vocab.nerc.ac.uk/standard_name/mole_fraction_of_carbon_monoxide_in_air/"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/NO",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Nitrogen monoxide",
+      "skos:definition": "Nitrogen monoxide (nitric oxide) in ambient air.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/pollutant"
+      },
+      "skos:notation": "NO",
+      "skos:altLabel": [
+        "nitric oxide"
+      ],
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/38"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/NOx",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Nitrogen oxides",
+      "skos:definition": "Nitrogen oxides in ambient air, reported as NO2 equivalent.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/pollutant"
+      },
+      "skos:notation": "NOX as NO2",
+      "skos:altLabel": [
+        "NOx",
+        "NOX"
+      ],
+      "skos:exactMatch": [
+        {
+          "@id": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant/9"
+        }
+      ]
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/record",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:about": {
+      "@id": "https://w3id.org/cdif/airquality/vocab/pollutant"
+    },
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/conceptscheme/2.0"
+      }
+    ]
+  }
+}

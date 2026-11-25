@@ -1,0 +1,88 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "schema": "http://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#"
+  },
+  "@id": "https://w3id.org/cdif/airquality/vocab/activity",
+  "@type": [
+    "skos:ConceptScheme"
+  ],
+  "skos:prefLabel": "AQ provenance activity types",
+  "skos:definition": "Types of prov:Activity in the air-quality data lifecycle, used on schema:additionalType of a prov:Activity (prov:wasGeneratedBy).",
+  "schema:version": "0.1.0",
+  "skos:hasTopConcept": [
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/activity/observation",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Observation",
+      "skos:definition": "The in-situ measurement/observation activity that produced the raw values.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/activity"
+      },
+      "skos:notation": "observation"
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/activity/data-reduction",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Data reduction / correction",
+      "skos:definition": "Processing that harmonizes, quality-controls and corrects raw sensor data into analysis-ready values (e.g. the FILTER framework).",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/activity"
+      },
+      "skos:notation": "data-reduction",
+      "skos:altLabel": [
+        "correction",
+        "processing"
+      ]
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/activity/calibration",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Calibration",
+      "skos:definition": "A calibration process relating sensor response to a reference (lab / field / co-location / model).",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/activity"
+      },
+      "skos:notation": "calibration"
+    },
+    {
+      "@id": "https://w3id.org/cdif/airquality/vocab/activity/deployment",
+      "@type": [
+        "skos:Concept"
+      ],
+      "skos:prefLabel": "Deployment",
+      "skos:definition": "Deployment of a sensor or instrument to a site for a monitoring period.",
+      "skos:inScheme": {
+        "@id": "https://w3id.org/cdif/airquality/vocab/activity"
+      },
+      "skos:notation": "deployment"
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "https://w3id.org/cdif/airquality/vocab/activity/record",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:about": {
+      "@id": "https://w3id.org/cdif/airquality/vocab/activity"
+    },
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/conceptscheme/2.0"
+      }
+    ]
+  }
+}

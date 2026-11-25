@@ -1,0 +1,812 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "aq": "https://w3id.org/cdif/airquality/examples/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "time": "http://www.w3.org/2006/time#",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "skos": "http://www.w3.org/2004/02/skos/core#"
+  },
+  "@id": "aq:openaq-loc-1236012",
+  "@type": [
+    "schema:Dataset"
+  ],
+  "schema:name": "Low-cost air-quality observations — Moraga, Merced (AirGradient sensor, OpenAQ location 1236012)",
+  "schema:description": "Hourly PM1 / PM2.5 / PM10, relative humidity, temperature, and 0.3 µm particle-count observations from an AirGradient OpenAir low-cost sensor at Moraga, Merced County, California (USA), harvested via the OpenAQ v3 platform and its open S3 archive. Values are low-cost-sensor readings (isMonitor = false), not reference-grade.",
+  "schema:identifier": {
+    "@id": "aq:openaq-loc-1236012-id",
+    "@type": [
+      "schema:PropertyValue"
+    ],
+    "schema:propertyID": "https://openaq.org",
+    "schema:value": "1236012",
+    "schema:url": "https://api.openaq.org/v3/locations/1236012"
+  },
+  "schema:additionalType": [
+    {
+      "@type": [
+        "schema:DefinedTerm"
+      ],
+      "schema:name": "Low-cost air-quality sensor observations",
+      "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/station-class",
+      "schema:termCode": "low-cost-sensor",
+      "schema:about": "maps OpenAQ isMonitor = false"
+    }
+  ],
+  "schema:version": "openaq-archive-20240609",
+  "schema:inLanguage": "en",
+  "schema:dateModified": "2024-06-12",
+  "schema:url": "https://explore.openaq.org/locations/1236012",
+  "schema:measurementTechnique": [
+    {
+      "@type": [
+        "schema:DefinedTerm"
+      ],
+      "schema:name": "Optical particle counting (laser light scattering)",
+      "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+      "schema:termCode": "OPC"
+    }
+  ],
+  "schema:license": [
+    {
+      "@id": "https://creativecommons.org/licenses/by/4.0/",
+      "@type": [
+        "schema:CreativeWork"
+      ],
+      "schema:name": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "schema:url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "schema:keywords": [
+    "air quality",
+    "low-cost sensor",
+    "particulate matter",
+    "PM2.5",
+    "citizen science",
+    {
+      "@type": [
+        "schema:DefinedTerm"
+      ],
+      "schema:name": "Particulate matter < 2.5 µm",
+      "schema:inDefinedTermSet": "http://dd.eionet.europa.eu/vocabulary/aq/pollutant",
+      "schema:termCode": "PM2.5"
+    }
+  ],
+  "schema:creator": {
+    "@list": [
+      {
+        "@id": "https://airgradient.com",
+        "@type": [
+          "schema:Organization"
+        ],
+        "schema:name": "AirGradient",
+        "schema:url": "https://www.airgradient.com",
+        "schema:contactPoint": {
+          "@type": [
+            "schema:ContactPoint"
+          ],
+          "schema:email": "anika.krause@airgradient.com"
+        }
+      }
+    ]
+  },
+  "schema:contributor": [
+    {
+      "@type": [
+        "schema:Role"
+      ],
+      "schema:roleName": "point of contact",
+      "schema:contributor": {
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:name": "Krause, Anika",
+        "schema:affiliation": {
+          "@id": "https://airgradient.com"
+        },
+        "schema:contactPoint": {
+          "@type": [
+            "schema:ContactPoint"
+          ],
+          "schema:email": "anika.krause@airgradient.com"
+        }
+      }
+    },
+    {
+      "@type": [
+        "schema:Role"
+      ],
+      "schema:roleName": "point of contact",
+      "schema:contributor": {
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:name": "Haug, Achim",
+        "schema:affiliation": {
+          "@id": "https://airgradient.com"
+        },
+        "schema:contactPoint": {
+          "@type": [
+            "schema:ContactPoint"
+          ],
+          "schema:email": "achim.haug@airgradient.com"
+        }
+      }
+    }
+  ],
+  "schema:publisher": {
+    "@type": [
+      "schema:Organization"
+    ],
+    "schema:name": "SEEN/SEEDS",
+    "schema:description": "Data owner recorded by OpenAQ for this location"
+  },
+  "schema:provider": [
+    {
+      "@id": "https://airgradient.com",
+      "@type": [
+        "schema:Organization"
+      ],
+      "schema:name": "AirGradient",
+      "schema:alternateName": "AirGradient (OpenAQ provider / sourceName)"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload",
+        "cdi:TabularTextDataSet",
+        "cdi:PhysicalDataSet"
+      ],
+      "schema:name": "OpenAQ daily CSV (location 1236012, 2024-06-09)",
+      "schema:description": "One gzipped CSV per location per day, narrow format: location_id, sensors_id, location, datetime, lat, lon, parameter, units, value",
+      "schema:contentUrl": "https://openaq-data-archive.s3.amazonaws.com/records/csv.gz/locationid=1236012/year=2024/month=06/location-1236012-20240609.csv.gz",
+      "schema:encodingFormat": [
+        "text/csv",
+        "application/gzip"
+      ],
+      "dcterms:conformsTo": [
+        {
+          "@id": "https://www.ietf.org/rfc/rfc4180"
+        }
+      ],
+      "schema:provider": [
+        {
+          "@type": [
+            "schema:Organization"
+          ],
+          "schema:name": "OpenAQ",
+          "schema:url": "https://openaq.org"
+        }
+      ],
+      "cdi:isStructuredBy": {
+        "@type": [
+          "cdi:LongDataStructure"
+        ],
+        "@id": "aq:openaq-loc-1236012/struct",
+        "cdi:has_DataStructureComponent": [
+          {
+            "@type": [
+              "cdi:IdentifierComponent"
+            ],
+            "@id": "aq:openaq-loc-1236012/struct/comp/location_id",
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-1236012/struct/rv/location_id",
+              "cdif:name": [
+                "location_id"
+              ],
+              "cdif:hasIntendedDataType": "xsd:string"
+            }
+          },
+          {
+            "@type": [
+              "cdi:VariableDescriptorComponent"
+            ],
+            "@id": "aq:openaq-loc-1236012/struct/comp/parameter",
+            "cdi:refersTo": {
+              "@id": "aq:openaq-loc-1236012/struct/comp/value"
+            },
+            "cdif:isDefinedBy_DescriptorVariable": {
+              "@type": [
+                "cdi:DescriptorVariable"
+              ],
+              "@id": "aq:openaq-loc-1236012/struct/dv/parameter",
+              "cdif:name": [
+                "parameter"
+              ],
+              "cdif:hasValuesFrom": {
+                "@type": [
+                  "cdi:DescriptorValueDomain"
+                ],
+                "@id": "aq:openaq-loc-1236012/struct/vd/parameter",
+                "cdif:takesValuesFrom": [
+                  {
+                    "cdif:value": "pm25",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:var-pm25"
+                    }
+                  },
+                  {
+                    "cdif:value": "pm1",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:var-pm1"
+                    }
+                  },
+                  {
+                    "cdif:value": "pm10",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:var-pm10"
+                    }
+                  },
+                  {
+                    "cdif:value": "temperature",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:var-temperature"
+                    }
+                  },
+                  {
+                    "cdif:value": "relativehumidity",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:var-relativehumidity"
+                    }
+                  },
+                  {
+                    "cdif:value": "um003",
+                    "cdif:isDefinedBy": {
+                      "@id": "aq:var-um003"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "@type": [
+              "cdi:VariableValueComponent"
+            ],
+            "@id": "aq:openaq-loc-1236012/struct/comp/value",
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-1236012/struct/rv/value",
+              "cdif:name": [
+                "value"
+              ],
+              "cdif:hasIntendedDataType": "xsd:decimal"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-1236012/struct/comp/sensors_id",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-1236012/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-1236012/struct/rv/sensors_id",
+              "cdif:name": [
+                "sensors_id"
+              ],
+              "cdif:hasIntendedDataType": "xsd:string"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-1236012/struct/comp/datetime",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-1236012/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-1236012/struct/rv/datetime",
+              "cdif:name": [
+                "datetime"
+              ],
+              "cdif:hasIntendedDataType": "xsd:dateTime"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-1236012/struct/comp/units",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-1236012/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-1236012/struct/rv/units",
+              "cdif:name": [
+                "units"
+              ],
+              "cdif:hasIntendedDataType": "xsd:string"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-1236012/struct/comp/lat",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-1236012/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-1236012/struct/rv/lat",
+              "cdif:name": [
+                "lat"
+              ],
+              "cdif:hasIntendedDataType": "xsd:decimal"
+            }
+          },
+          {
+            "@type": [
+              "cdi:AttributeComponent"
+            ],
+            "@id": "aq:openaq-loc-1236012/struct/comp/lon",
+            "cdif:qualifies": [
+              {
+                "@id": "aq:openaq-loc-1236012/struct/comp/value"
+              }
+            ],
+            "cdif:isDefinedBy_Variable": {
+              "@type": [
+                "cdi:RepresentedVariable"
+              ],
+              "@id": "aq:openaq-loc-1236012/struct/rv/lon",
+              "cdif:name": [
+                "lon"
+              ],
+              "cdif:hasIntendedDataType": "xsd:decimal"
+            }
+          }
+        ],
+        "cdif:has_PrimaryKey": {
+          "@type": [
+            "cdif:Key"
+          ],
+          "@id": "aq:openaq-loc-1236012/struct/pk",
+          "cdif:isComposedOf": [
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-1236012/struct/comp/location_id"
+              },
+              "cdi:value": 1
+            },
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-1236012/struct/comp/parameter"
+              },
+              "cdi:value": 2
+            },
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-1236012/struct/comp/sensors_id"
+              },
+              "cdi:value": 3
+            },
+            {
+              "@type": [
+                "cdi:ComponentPosition"
+              ],
+              "cdi:indexes": {
+                "@id": "aq:openaq-loc-1236012/struct/comp/datetime"
+              },
+              "cdi:value": 4
+            }
+          ]
+        }
+      }
+    },
+    {
+      "@type": [
+        "schema:WebAPI"
+      ],
+      "schema:name": "OpenAQ v3 API — location measurements",
+      "schema:serviceType": "OpenAQ v3",
+      "schema:termsOfService": "https://docs.openaq.org/about/terms",
+      "schema:documentation": "https://docs.openaq.org/",
+      "schema:potentialAction": [
+        {
+          "@type": [
+            "schema:SearchAction"
+          ],
+          "schema:name": "Get sensor measurements",
+          "schema:target": {
+            "@type": [
+              "schema:EntryPoint"
+            ],
+            "schema:urlTemplate": "https://api.openaq.org/v3/sensors/{sensors_id}/measurements",
+            "schema:httpMethod": [
+              "GET"
+            ],
+            "schema:contentType": [
+              "application/json"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "schema:relatedLink": [
+    {
+      "@type": [
+        "schema:LinkRole"
+      ],
+      "schema:linkRelationship": "calibration documentation",
+      "schema:target": {
+        "@type": [
+          "schema:EntryPoint"
+        ],
+        "schema:name": "AirGradient calibration algorithms",
+        "schema:url": "https://www.airgradient.com/documentation/calibration-algorithms/",
+        "schema:encodingFormat": "text/html"
+      }
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "aq:var-pm25",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "pm25",
+      "schema:description": "Mass concentration of particulate matter < 2.5 µm (EPA-corrected, AirGradient)",
+      "schema:alternateName": [
+        "PM2.5"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/PM2.5"
+        }
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    },
+    {
+      "@id": "aq:var-pm1",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "pm1",
+      "schema:alternateName": [
+        "PM1"
+      ],
+      "schema:propertyID": [
+        "pm1"
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    },
+    {
+      "@id": "aq:var-pm10",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "pm10",
+      "schema:alternateName": [
+        "PM10"
+      ],
+      "schema:propertyID": [
+        {
+          "@id": "https://w3id.org/cdif/airquality/vocab/pollutant/PM10"
+        }
+      ],
+      "schema:unitText": "µg/m³",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/MicroGM-PER-M3"
+      }
+    },
+    {
+      "@id": "aq:var-temperature",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "temperature",
+      "schema:propertyID": [
+        "temperature"
+      ],
+      "schema:unitText": "°C",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/DEG_C"
+      }
+    },
+    {
+      "@id": "aq:var-relativehumidity",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "relativehumidity",
+      "schema:propertyID": [
+        "relativehumidity"
+      ],
+      "schema:unitText": "%",
+      "schema:unitCode": {
+        "@id": "http://qudt.org/vocab/unit/PERCENT"
+      }
+    },
+    {
+      "@id": "aq:var-um003",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "um003",
+      "schema:description": "Count of particles ≥ 0.3 µm (AirGradient/Plantower channel)",
+      "schema:propertyID": [
+        "um003"
+      ],
+      "schema:unitText": "particles/cm³"
+    }
+  ],
+  "schema:spatialCoverage": [
+    {
+      "@type": [
+        "schema:Place"
+      ],
+      "schema:name": "Moraga, Merced",
+      "schema:geo": {
+        "@type": [
+          "schema:GeoCoordinates"
+        ],
+        "schema:latitude": 37.329078,
+        "schema:longitude": -120.436499
+      }
+    }
+  ],
+  "schema:temporalCoverage": [
+    "2023-07-15/2024-06-09"
+  ],
+  "dqv:hasQualityMeasurement": [
+    {
+      "@type": [
+        "dqv:QualityMeasurement"
+      ],
+      "dqv:isMeasurementOf": {
+        "@type": [
+          "schema:DefinedTerm"
+        ],
+        "schema:name": "Correction applied",
+        "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/qc",
+        "schema:termCode": "correction-method"
+      },
+      "dqv:value": "PM2.5: EPA correction (AirGradient)"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "prov:Activity",
+        "schema:Action"
+      ],
+      "schema:additionalType": [
+        {
+          "@type": [
+            "schema:DefinedTerm"
+          ],
+          "schema:name": "Stationary deployment",
+          "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/mobility",
+          "schema:termCode": "static",
+          "schema:about": "maps OpenAQ isMobile = false"
+        }
+      ],
+      "schema:instrument": {
+        "@id": "aq:instrument-airgradient-openair",
+        "@type": [
+          "schema:Product"
+        ],
+        "schema:name": "AirGradient OpenAir",
+        "schema:additionalType": [
+          {
+            "@type": [
+              "schema:DefinedTerm"
+            ],
+            "schema:name": "Low-cost air-quality sensor",
+            "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/station-class",
+            "schema:termCode": "low-cost-sensor"
+          }
+        ],
+        "schema:manufacturer": {
+          "@type": [
+            "schema:Organization"
+          ],
+          "schema:name": "AirGradient",
+          "schema:url": "https://www.airgradient.com"
+        },
+        "schema:model": {
+          "@type": [
+            "schema:ProductModel"
+          ],
+          "schema:name": "O-1PST / O-1PPT"
+        },
+        "schema:additionalProperty": [
+          {
+            "@type": [
+              "schema:PropertyValue"
+            ],
+            "schema:name": "calibration / correction",
+            "schema:propertyID": [
+              "calibration-method"
+            ],
+            "schema:value": "PM2.5: EPA correction"
+          }
+        ],
+        "schema:hasPart": [
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "PMS5003 PM sensor module",
+            "schema:model": {
+              "@type": [
+                "schema:ProductModel"
+              ],
+              "schema:name": "PMS5003"
+            },
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "optical particle counter element",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "Optical particle counting",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "OPC",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/OPC"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@type": [
+              "schema:Product"
+            ],
+            "schema:name": "SHT temperature / relative-humidity sensor module",
+            "schema:hasPart": [
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "capacitive relative-humidity element",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "Capacitive sensing",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "CAP",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/CAP"
+                  }
+                ]
+              },
+              {
+                "@type": [
+                  "schema:Product"
+                ],
+                "schema:name": "RTD temperature element",
+                "schema:additionalType": [
+                  {
+                    "@type": [
+                      "schema:DefinedTerm"
+                    ],
+                    "schema:name": "Resistance temperature detector",
+                    "schema:inDefinedTermSet": "https://w3id.org/cdif/airquality/vocab/measurement-method",
+                    "schema:termCode": "RTD",
+                    "schema:identifier": "https://w3id.org/cdif/airquality/vocab/measurement-method/RTD"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "schema:location": {
+        "@type": [
+          "schema:Place"
+        ],
+        "schema:name": "Moraga, Merced deployment site",
+        "schema:additionalProperty": [
+          {
+            "@type": [
+              "schema:PropertyValue"
+            ],
+            "schema:name": "time zone",
+            "schema:propertyID": [
+              "https://www.iana.org/time-zones"
+            ],
+            "schema:value": "America/Los_Angeles"
+          }
+        ]
+      }
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "aq:openaq-loc-1236012-record",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:about": {
+      "@id": "aq:openaq-loc-1236012"
+    },
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/core/2.0"
+      },
+      {
+        "@id": "https://w3id.org/cdif/discovery/2.0"
+      },
+      {
+        "@id": "https://w3id.org/cdif/data_structure/2.0"
+      }
+    ],
+    "schema:dateModified": "2024-06-12",
+    "schema:maintainer": {
+      "@type": [
+        "schema:Organization"
+      ],
+      "schema:name": "CDIF Air-Quality profile (example instance)"
+    },
+    "schema:includedInDataCatalog": {
+      "@id": "https://openaq.org",
+      "@type": [
+        "schema:DataCatalog"
+      ],
+      "schema:name": "OpenAQ",
+      "schema:url": "https://openaq.org"
+    }
+  }
+}
