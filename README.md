@@ -166,7 +166,9 @@ As part of this work the shared **Instrument building block** was relaxed to all
 
 ## 10. Data licensing
 
-The harvested data samples retain their source licenses: the FILTER samples are **CC BY 4.0**; OpenAQ AirNow is **US Public Domain**, AirGradient is **CC BY 4.0**, and Chile/SINCA has no license stated by the provider. Consult each source before reuse. Licensing of the derived CDIF artifacts in this repo is to be decided by the maintainer.
+This repository's own content — the crosswalk, the CDIF instance records, the vocabularies, the scripts, and the documentation — is released under **Creative Commons Attribution 4.0 International (CC BY 4.0)**; see [`LICENSE`](LICENSE).
+
+The harvested data samples under `data_examples/` retain their **source** licenses: the FILTER samples are **CC BY 4.0**; OpenAQ AirNow is **US Public Domain**, AirGradient is **CC BY 4.0**, and Chile/SINCA has no license stated by the provider. Consult each source before reuse.
 
 ---
 
